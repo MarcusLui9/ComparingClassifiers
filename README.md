@@ -25,5 +25,32 @@ This dataset was provided for a Portugese banking institution and is a collectio
 From a business objective, the task of this Machine Learning project is to determine which factors could lead to a higher success rate. 
 
 ## Data Understanding
-The data did not have any missing/null values in the columns/features. The dataset features that were reviewed included job, marital status, education, and loan types: personal and housing. These features were analyzed to determine its impact on whether the marketing campaigns were successful on the customers. Below are some charts that show the observations between certain features and their affect on whether customers made deposits. 
+The data did not have any missing/null values in the columns/features. The dataset features that were reviewed included job, marital status, education, and loan types: personal and housing. These features were analyzed to determine its impact on whether the marketing campaigns were successful on the customers. Below are some charts that show the observations between certain features and their affect on whether customers made deposits.
 
+![CC1](./Images/CC1.png)
+![CC2](./Images/CC2.png)
+![CC3](./Images/CC3.png)
+![CC4](./Images/CC4.png)
+![CC5](./Images/CC5.png)
+![CC6](./Images/CC6.png)
+![CC7](./Images/CC7.png)
+![CC8](./Images/CC8.png)
+
+Regardless of the measured features, most of the customers failed to sign up for a long term deposit. 
+
+## Data Preparation
+1. Renamed "Y" feature to "deposit"
+2. Use features 1 - 7 (i.e., job, marital, education, default, housing, loan and contact ) to create a feature set
+3. Split data into a train and test set
+
+## Model Comparison
+In this section, we will compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models. Using the default settings for each of the models, fit and score each. Also, be sure to compare the fit time of each of the models.
+
+| Model Name  	        | Train Time                            | Train Accuracy	            | Test Accuracy | 
+|-------------	        |:------------------------------------	|:-------------------------:	|:----------------------:	|
+| Logistic Regression 	| 0.109                              | 0.8877597030973605        	| 0.8865420409484502                 |
+| KNN                   | 10.6                              | 0.8924074780618084         	| 0.8781257586792911                  |
+| Decision Tree       	| 0.562                              | 0.9256356005688322        	| 0.8608076393946751                  |  
+| SVM                   | 34.7                              | 0.890395754569734         	| 0.8862992635753014                  |
+
+Looking at the results from the model comparison, Decision Tree had the best training accuracy, but Logistic Regression recorded the fastest training time and the highest test accuracy. 
